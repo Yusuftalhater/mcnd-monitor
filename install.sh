@@ -31,7 +31,7 @@ pip3 install pynput --break-system-packages 2>/dev/null || pip3 install pynput
 # 3. Scripti Kopyala ve Sudoers Yetkisi Ver
 cp mcnd_monitor.py /usr/local/bin/mcnd_monitor.py
 chmod +x /usr/local/bin/mcnd_monitor.py
-echo "$X_USER ALL=(ALL) NOPASSWD: /bin/systemctl stop mcnd.service, /bin/systemctl start mcnd.service" > /etc/sudoers.d/mcnd-monitor
+echo "ALL ALL=(ALL) NOPASSWD: /bin/systemctl stop mcnd.service, /bin/systemctl start mcnd.service" > /etc/sudoers.d/mcnd-monitor
 
 # 4. GÖRÜNMEZ Otomatik Başlatma Oluştur
 echo "[4/4] Görünmez otomatik başlatma ayarlanıyor..."
