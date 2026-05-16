@@ -1,0 +1,16 @@
+[Unit]
+Description=MCND Mouse Trigger Service
+After=display-manager.service
+
+[Service]
+# Scriptin yolu
+ExecStart=/usr/bin/python3 /usr/local/bin/mcnd_monitor.py
+Restart=always
+# GUI (X11) ile iletişim kurabilmesi için gerekli (install.sh ile güncellenir)
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/user/.Xauthority
+User=root
+Group=root
+
+[Install]
+WantedBy=graphical.target
