@@ -4,7 +4,7 @@ import os
 from pynput import mouse
 
 # Yapılandırma
-THRESHOLD = 100  # Köşe hassasiyeti (piksel)
+THRESHOLD = 200  # Köşe hassasiyeti (piksel)
 SEQUENCE_ACTIONS = {
     ('top_right', 'top_left', 'bottom_center'): 'stop',
     ('top_left', 'top_right', 'bottom_center'): 'start',

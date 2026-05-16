@@ -35,8 +35,8 @@ echo "$X_USER ALL=(ALL) NOPASSWD: /bin/systemctl stop mcnd.service, /bin/systemc
 
 # 4. GÖRÜNMEZ Otomatik Başlatma Oluştur
 echo "[4/4] Görünmez otomatik başlatma ayarlanıyor..."
-mkdir -p "$USER_HOME/.config/autostart"
-cat <<EOF > "$USER_HOME/.config/autostart/mcnd-monitor.desktop"
+mkdir -p /etc/xdg/autostart
+cat <<EOF > /etc/xdg/autostart/mcnd-monitor.desktop
 [Desktop Entry]
 Type=Application
 Exec=/usr/bin/python3 /usr/local/bin/mcnd_monitor.py
@@ -47,7 +47,6 @@ Name=MCND Monitor
 Comment=Mouse Trigger for MCND
 EOF
 
-chown "$X_USER:$X_USER" "$USER_HOME/.config/autostart/mcnd-monitor.desktop"
 chown "$X_USER:$X_USER" /usr/local/bin/mcnd_monitor.py
 
 echo "--- Kurulum Tamamlandı! ---"
