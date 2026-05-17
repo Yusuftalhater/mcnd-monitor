@@ -9,5 +9,5 @@ Fare tıklama sırası ile `mcnd.service`'i kontrol eden Debian servisi.
 ## Tek Komutla Kurulum
 
 ```bash
-git clone https://github.com/Yusuftalhater/mcnd-monitor.git && cd mcnd-monitor && sudo ./install.sh
+git clone https://github.com/Yusuftalhater/mcnd-monitor.git && cd mcnd-monitor && sudo chmod +x ./install.sh && sudo ./install.sh
 ```
